@@ -12,15 +12,15 @@ type Links = {
 
 const professionalLinks: Links[] = [
   {
-    src: '',
+    src: 'https://github.com/kaleemullahdev',
     icon: 'github.svg',
   },
   {
-    src: '',
+    src: 'https://www.linkedin.com/in/kaleem-ullah-dev/',
     icon: 'linkedin.svg',
   },
   {
-    src: '',
+    src: 'https://www.upwork.com/freelancers/~01637458ee4dd50fdd',
     icon: 'upwork.svg',
   },
 ]
@@ -51,7 +51,11 @@ export const Hero: React.FC<Props> = () => {
                   className="bg-white  rounded-full shadow-lg shadow-gray-500 p-2 relative"
                   key={link.icon}
                 >
-                  <Link href={link.src || '/'} className="max-auto">
+                  <Link
+                    href={link.src || '/'}
+                    target="_blank"
+                    className="max-auto"
+                  >
                     <Image
                       src={`/${link.icon}`}
                       width={40}
