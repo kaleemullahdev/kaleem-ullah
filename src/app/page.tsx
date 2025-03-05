@@ -1,4 +1,11 @@
+import { Hero } from '~/components/hero'
+import { Projects } from '~/components/projects'
 const HomePage = () => {
-  return <div>HomePage</div>;
-};
-export default HomePage;
+  return (
+    <>
+      <Hero />
+      <Projects />
+    </>
+  )
+}
+export default HomePage
