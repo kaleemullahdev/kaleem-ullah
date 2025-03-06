@@ -17,7 +17,7 @@ export const HireButton: React.FC<{ professionalLinks: Links[] }> = ({
     <div className="relative">
       {/* {showIcons ? ( */}
       <div
-        className={`absolute top-1 w-1/2 flex flex-row md:flex-row justify-between  items-center  bottom-full   transform -translate-x-1/5   space-x-2 transition-all
+        className={`absolute top-1 w-1/3 flex flex-row md:flex-row justify-evenly  items-center  bottom-full   transform -translate-x-1/5   space-x-2 transition-all
         duration-300 ${
           showIcons
             ? 'opacity-100 translate-y-0'

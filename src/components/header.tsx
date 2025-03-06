@@ -18,29 +18,29 @@ export const Header = () => {
         <ul className="hidden bg-slate-50 z-10 opacity-70 shadow-lg py-5 px-4 rounded-full md:flex  items-center gap-2 font-primary text-md hover:opacity-100">
           <li>
             {' '}
-            <a href="#home" className={navLinkClass}>
+            <Link href="/" className={navLinkClass}>
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#features" className={navLinkClass}>
+            <Link href="/" className={navLinkClass}>
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#pricing" className={navLinkClass}>
+            <Link href="/" className={navLinkClass}>
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#testimonials" className={navLinkClass}>
+            <Link href="/" className={navLinkClass}>
               Testimonials
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#subscribe" className={navLinkClass}>
+            <Link href="/" className={navLinkClass}>
               Help
-            </a>
+            </Link>
           </li>
         </ul>
         <div></div>
