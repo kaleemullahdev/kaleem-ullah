@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { HireButton } from './HireButton'
 type Props = {
   imageUrl?: string
 }
 
-type Links = {
+export type Links = {
   src?: string
   icon: string
 }
@@ -70,18 +71,15 @@ export const Hero: React.FC<Props> = () => {
           </div>
         </div>
         <div className="md:w-1/2 mb-8 md:mb-0 space-y-8" data-aos="fade-right">
-          <h1 className="text-headingText lg:text-6xl md:text-5xl text-3xl font-bold md:leading-3 sm:leading-4">
-            Full Stack (Front-End Heavy) <br className="hidden lg:block" />
-            Developer.
+          <h1 className="text-headingText md:text-4xl text-2xl font-bold md:leading-12 sm:leading-4">
+            Full Stack (Front-End Heavy) Developer
           </h1>
           <p className="text-lg text-headingText leading-relaxed max-w-xl">
             Hi {`I'm`} Kaleem Ullah. A creative Frontend Developer with 5+ years
             of experience in building high-performance, scalable, and responsive
             web solutions.
           </p>
-          <button className="bg-primary text-white px-12 py-4 rounded-lg hover:bg-red-600 shadow-lg hover:shadow-xl transition duration-200 cursor-pointer font-medium text-lg">
-            Hire Me
-          </button>
+          <HireButton professionalLinks={professionalLinks} />
         </div>
       </div>
     </section>
