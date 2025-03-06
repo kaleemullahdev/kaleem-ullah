@@ -17,18 +17,18 @@ export const Footer = () => {
               Get In Touch
             </h3>
             <div className="text-textPrimary pt-10 flex flex-col gap-3">
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="bg-secondary rounded-full px-2 py-2">📱</div>
                 <div className="flex flex-col justify-center">
                   <h4>Phone</h4>
                   <p>+1 (123) 456-7890</p>
                 </div>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3">
                 <div className="bg-secondary rounded-full px-2 py-2">✉️</div>
                 <div className="flex flex-col justify-center">
                   <h4>Email</h4>
-                  <p>john.doe@example.com</p>
+                  <p>kaleemullah786.ku61@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-3">

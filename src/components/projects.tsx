@@ -3,11 +3,11 @@ import { ProjectCard } from './project-card'
 export const Projects = () => {
   return (
     <section className="section-container" id="home">
-      <div className="flex flex-col items-center gap-12 z-30  p-10 rounded-xl">
+      <div className="flex flex-col items-center  z-30  rounded-xl">
         <h3 className="text-headingText lg:text-3xl md:text-2xl text-2xl font-bold leading-3 text-center w-full">
           My Projects
         </h3>
-        <div>
+        <div className="m-10">
           <ul className="hidden bg-slate-50 shadow-md py-5 px-4 rounded-full md:flex  items-center gap-2 font-primary text-sm">
             <li>
               <a href="#home" className={PRIMARY_LINK_CLASS}>
@@ -36,7 +36,7 @@ export const Projects = () => {
             </li>
           </ul>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3  gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {PROJECTS_DATA?.map((data) => {
             return <ProjectCard key={data?.id} {...data} />
           })}

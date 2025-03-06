@@ -45,7 +45,7 @@ export const Hero: React.FC<Props> = () => {
               alt="Profile Image"
             />
           </div>
-          <div className="w-1/3 flex flex-row md:flex-row justify-between  items-center mt-8">
+          <div className="md:w-1/3 w-full flex flex-row md:flex-row justify-evenly  items-center mt-8">
             {professionalLinks?.map((link) => {
               return (
                 <div
