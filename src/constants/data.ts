@@ -63,7 +63,7 @@ export const PROJECTS_DATA = [
     technologies: [
       'React',
       'Next.js',
-      'Tailwind CSS',
+      'Tailwind Css',
       'Typescript',
       'React Framer',
       'Performance Optimization',

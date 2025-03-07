@@ -28,7 +28,7 @@ const services: Service[] = [
 ]
 export const Services = () => {
   return (
-    <section className="section-container text-center" id="home">
+    <section className="section-container text-center" id="services">
       <div className="flex flex-col items-center gap-12 z-30 rounded-xl">
         <h3 className="text-headingText lg:text-3xl md:text-2xl text-2xl font-bold leading-3 text-center w-full">
           My Services
