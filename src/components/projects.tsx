@@ -53,7 +53,7 @@ export const Projects = () => {
               return (
                 <li
                   key={id}
-                  className={`${PRIMARY_LINK_CLASS} ${activeTab === id ? 'opacity-100 bg-primary text-white' : 'opacity-70'}  py-3 px-5 `}
+                  className={`${PRIMARY_LINK_CLASS} ${activeTab === id ? 'opacity-100 bg-primary text-white' : 'opacity-70'}  py-3 px-5 cursor-pointer `}
                   onClick={() => setActiveTab(id)}
                 >
                   {name}
