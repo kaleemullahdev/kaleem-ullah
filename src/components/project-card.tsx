@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import * as motion from 'motion/react-client'
 type Project = {
   id: string
   name: string
@@ -9,9 +11,9 @@ type Project = {
   technologies: string[]
 }
 
-type GetRandomColor = () => { bg: string; text: string }
+type GetRandomColor = (index: number) => { bg: string; text: string }
 
-const getRandomColor: GetRandomColor = () => {
+const getRandomColor: GetRandomColor = (index) => {
   const colorOptions = [
     { bg: 'bg-blue-100', text: 'text-blue-800' },
     { bg: 'bg-green-100', text: 'text-green-800' },
@@ -24,8 +26,7 @@ const getRandomColor: GetRandomColor = () => {
     { bg: 'bg-teal-100', text: 'text-teal-800' },
     { bg: 'bg-orange-100', text: 'text-orange-800' },
   ]
-  const randomIndex = Math.floor(Math.random() * colorOptions.length)
-  return colorOptions[randomIndex > colorOptions.length ? 0 : randomIndex]
+  return colorOptions[index >= colorOptions?.length ? 0 : index]
 }
 
 export const ProjectCard = ({
@@ -34,10 +35,24 @@ export const ProjectCard = ({
   url,
   coverImage,
   technologies,
+  id,
 }: Project) => {
   return (
-    <div className="flex flex-col py-5 bg-white rounded-lg shadow-md cursor-pointer shadow-primary overflow-hidden h-full ">
-      <div className="relative h-48 ">
+    <motion.div
+      key={id}
+      id={id}
+      initial={{ opacity: 0, y: 100 }}
+      transition={{ duration: 0.6, delay: 0.3 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0, rotate: 0 }}
+      className="flex flex-col pt-5 bg-white rounded-lg shadow-md cursor-pointer shadow-primary overflow-hidden h-full "
+    >
+      <motion.div
+        className="relative h-52"
+        initial={{ opacity: 1, scale: 1 }}
+        // draggable
+        whileHover={{ scale: 1.5 }}
+      >
         <Image
           src={`/${coverImage}`}
           alt="Project 1"
@@ -45,14 +60,13 @@ export const ProjectCard = ({
           fill
           className="w-full h-full object-cover"
         />
-      </div>
+      </motion.div>
       <div className="flex flex-col flex-grow p-4">
         <h3 className="text-lg text-textPrimary font-semibold mb-2">{name}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech, key) => {
-            const { bg, text } = getRandomColor()
-            console.log('bg', bg)
+            const { bg, text } = getRandomColor(key)
             return (
               <p
                 key={key}
@@ -63,14 +77,19 @@ export const ProjectCard = ({
             )
           })}
         </div>
-        <div className="mt-auto flex justify-center">
+        <div className="mt-auto ml-auto flex justify-center">
           <Link href={url} target="_blank">
-            <button className="px-4 py-2 bg-primary text-white rounded-full hover:bg-secondary">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.1, delay: 0.1 }}
+              className="px-4 py-2 text-sm bg-primary font-medium text-white rounded-lg"
+            >
               View Project
-            </button>
+            </motion.button>
           </Link>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
