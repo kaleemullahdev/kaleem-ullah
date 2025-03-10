@@ -61,23 +61,27 @@ export const ProjectCard = ({
           className="w-full h-full object-cover"
         />
       </motion.div>
-      <div className="flex flex-col flex-grow p-4">
-        <h3 className="text-lg text-textPrimary font-semibold mb-2">{name}</h3>
-        <p className="text-gray-600 mb-4">{description}</p>
-        <div className="flex flex-wrap gap-2 mb-4">
-          {technologies.map((tech, key) => {
-            const { bg, text } = getRandomColor(key)
-            return (
-              <p
-                key={key}
-                className={`px-2 py-1 ${bg} rounded-full ${text} text-xs font-medium`}
-              >
-                {tech}
-              </p>
-            )
-          })}
+      <div className="flex flex-col flex-grow p-4  justify-between">
+        <div>
+          <h3 className="text-lg text-textPrimary font-semibold mb-2">
+            {name}
+          </h3>
+          <p className="text-gray-600 mb-4">{description}</p>
+          <div className="flex flex-wrap gap-2">
+            {technologies.map((tech, key) => {
+              const { bg, text } = getRandomColor(key)
+              return (
+                <p
+                  key={key}
+                  className={`px-2 py-1 ${bg} rounded-full ${text} text-xs font-medium`}
+                >
+                  {tech}
+                </p>
+              )
+            })}
+          </div>
         </div>
-        <div className="mt-auto ml-auto flex justify-center">
+        <div className="mt-5 flex justify-end">
           <Link href={url} target="_blank">
             <motion.button
               whileHover={{ scale: 1.1 }}

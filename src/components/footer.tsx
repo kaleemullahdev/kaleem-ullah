@@ -17,13 +17,6 @@ export const Footer = () => {
               Get In Touch
             </h3>
             <div className="text-textPrimary pt-10 flex flex-col gap-3">
-              {/* <div className="flex items-center gap-3">
-                <div className="bg-secondary rounded-full px-2 py-2">📱</div>
-                <div className="flex flex-col justify-center">
-                  <h4>Phone</h4>
-                  <p>+1 (123) 456-7890</p>
-                </div>
-              </div> */}
               <div className="flex items-center gap-3">
                 <div className="bg-secondary rounded-full px-2 py-2">✉️</div>
                 <div className="flex flex-col justify-center">
@@ -35,14 +28,7 @@ export const Footer = () => {
                 <div className="bg-secondary rounded-full px-2 py-2">📍</div>
                 <div className="flex flex-col justify-center">
                   <h4>Location</h4>
-                  <p>San Francisco, California</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="bg-secondary rounded-full px-2 py-2">⏰</div>
-                <div className="flex flex-col justify-center">
-                  <h4>Working Hours</h4>
-                  <p>Monday - Friday: 9am - 5pm</p>
+                  <p>Islamabad, Pakistan</p>
                 </div>
               </div>
             </div>
