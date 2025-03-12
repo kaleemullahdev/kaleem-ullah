@@ -1,6 +1,7 @@
 import type { NextConfig } from 'next'
+const isProd = process.env.NODE_ENV === 'production'
 const nextConfig: NextConfig = {
-  basePath: process.env.PAGES_BASE_PATH,
+  basePath: isProd ? '/kaleem-ullah' : '',
   output: 'export',
 }
 
