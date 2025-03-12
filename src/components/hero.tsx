@@ -39,7 +39,7 @@ export const Hero: React.FC<Props> = () => {
         >
           <div className="shadow-primary shadow-sm rounded-full">
             <Image
-              src={`/kaleem-ullah/profile.png}`}
+              src={`/profile.png`}
               height={300}
               width={300}
               sizes="100vw"
