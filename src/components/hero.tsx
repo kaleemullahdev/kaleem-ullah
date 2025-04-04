@@ -22,10 +22,10 @@ const professionalLinks: Links[] = [
     src: 'https://www.linkedin.com/in/kaleem-ullah-dev/',
     icon: 'linkedin.svg',
   },
-  {
-    src: 'https://www.upwork.com/freelancers/~01637458ee4dd50fdd',
-    icon: 'upwork.svg',
-  },
+  // {
+  //   src: 'https://www.upwork.com/freelancers/~01637458ee4dd50fdd',
+  //   icon: 'upwork.svg',
+  // },
 ]
 
 export const Hero: React.FC<Props> = () => {
@@ -48,7 +48,7 @@ export const Hero: React.FC<Props> = () => {
               alt="Profile Image"
             />
           </div>
-          <div className="md:w-1/3 w-full flex flex-row md:flex-row justify-evenly  items-center mt-8">
+          <div className="md:w-1/4 w-full flex flex-row md:flex-row justify-evenly  items-center mt-8">
             {professionalLinks?.map((link, index) => {
               return (
                 <motion.div
@@ -81,7 +81,7 @@ export const Hero: React.FC<Props> = () => {
             })}
           </div>
         </div>
-        <div className="md:w-1/2 mb-8 md:mb-0 space-y-8" data-aos="fade-right">
+        <div className="md:w-1/4 mb-8 md:mb-0 space-y-8" data-aos="fade-right">
           <h1 className="text-headingText md:text-4xl text-2xl font-bold md:leading-12 sm:leading-4">
             Full Stack (Front-End Heavy) Developer
           </h1>
