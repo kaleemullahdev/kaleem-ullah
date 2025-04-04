@@ -6,7 +6,7 @@ const nextConfig = (phase: string) => {
     output: 'export',
     assetPrefix: isDev ? undefined : '/kaleem-ullah',
     images: {
-      unoptimized: false,
+      unoptimized: true,
       loader: isDev ? 'default' : 'custom',
       loaderFile: isDev ? undefined : './src/utils/imageLoader.ts',
     },

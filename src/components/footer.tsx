@@ -21,9 +21,12 @@ export const Footer = () => {
                 <div className="bg-secondary rounded-full px-2 py-2">✉️</div>
                 <div className="flex flex-col justify-center">
                   <h4>Email</h4>
-                  <p>kaleemullah786.ku61@gmail.com</p>
+                  <a href="mailto:kaleemullah786.ku61@gmail.com">
+                    kaleemullah786.ku61@gmail.com
+                  </a>
                 </div>
               </div>
+
               <div className="flex items-center gap-3">
                 <div className="bg-secondary rounded-full px-2 py-2">📍</div>
                 <div className="flex flex-col justify-center">
