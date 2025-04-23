@@ -18,7 +18,7 @@ export const HireButton: React.FC<{ professionalLinks: Links[] }> = ({
   return (
     <div className="relative">
       <div
-        className={`absolute top-1 w-1/3 flex flex-row md:flex-row justify-evenly  items-center  bottom-full   transform -translate-x-1/5   space-x-2 transition-all`}
+        className={`absolute top-1 w-1/2 xs:w-1/3 flex flex-row md:flex-row justify-evenly  items-center  bottom-full   transform -translate-x-1/5   space-x-2 transition-all`}
       >
         <AnimatePresence>
           {showIcons
@@ -62,7 +62,7 @@ export const HireButton: React.FC<{ professionalLinks: Links[] }> = ({
           className="bg-primary text-white px-20 py-3 mt-10 rounded-lg hover:bg-red-600 shadow-lg hover:shadow-xl transition duration-200 cursor-pointer font-medium text-lg"
           onClick={onHireClick}
         >
-          Hire Me
+          Contact Me
         </motion.button>
       </div>
     </div>

@@ -11,21 +11,24 @@ type Props = {
 export type Links = {
   src?: string
   icon: string
+  type?: string
 }
 
 const professionalLinks: Links[] = [
   {
     src: 'https://github.com/kaleemullahdev',
     icon: 'github.svg',
+    type: '_blank',
   },
   {
     src: 'https://www.linkedin.com/in/kaleem-ullah-dev/',
     icon: 'linkedin.svg',
+    type: '_blank',
   },
-  // {
-  //   src: 'https://www.upwork.com/freelancers/~01637458ee4dd50fdd',
-  //   icon: 'upwork.svg',
-  // },
+  {
+    src: 'mailto:kaleemullah786.ku61@gmail.com',
+    icon: 'email.svg',
+  },
 ]
 
 export const Hero: React.FC<Props> = () => {
@@ -48,7 +51,7 @@ export const Hero: React.FC<Props> = () => {
               alt="Profile Image"
             />
           </div>
-          <div className="md:w-1/4 w-full flex flex-row md:flex-row justify-evenly  items-center mt-8">
+          <div className="md:w-1/3 w-full flex flex-row md:flex-row justify-evenly  items-center mt-8">
             {professionalLinks?.map((link, index) => {
               return (
                 <motion.div
@@ -65,7 +68,7 @@ export const Hero: React.FC<Props> = () => {
                 >
                   <Link
                     href={link.src || '/'}
-                    target="_blank"
+                    target={link.type}
                     className="max-auto"
                   >
                     <Image
